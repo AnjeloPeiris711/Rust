@@ -1,5 +1,5 @@
-# Rust
-
+# Rust 
+- [x] `Chapter 1 Introduction`
 ## Declare variables
 > use ```let``` keyword
 ```rust

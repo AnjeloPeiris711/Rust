@@ -51,3 +51,78 @@ one bit size use values
 ``` rust     
 true     false 
 ```          
+## Compound data types
+
+### Array
+``` rust     
+fn main(){
+  let first_name = array[0]; 
+} 
+```
+### Tuples
+> empty tuple called `unit`
+``` rust     
+fn main(){
+  let tuple:(bool ,u16,u8)=(true,2,3);
+  println!("{}",tuple.0);
+}
+```
+## Function
+> start with `fn`
+``` rust     
+fn exclaim(input :String) -> String {                         fn main(){
+  //funtion body              ⬆️---optional return type          last_char(String::from("hello"));
+}                                                                   ⬆️---------call the funtion
+                                                              }
+                                                              fn last_char(input:String) -> char{
+                                                                if input.is_empty()
+                                                                {
+                                                                      return '😁'
+                                                                }
+                                                                input.chars().next_back().unwrap()
+                                                              }
+```
+## Structs
+> A type that's composed of other types
+> use `struct`
+``` rust
+struct Car {
+  make: String,
+  model: String,
+  year: u32,
+}
+fn main(){
+  let car1 = Car
+ {
+    make: String::from("Ford"),
+    model: String::from("Mustang"),
+    year:1967
+ }
+}
+```
+## Enum
+> use `enum`
+> custom data types that can be use used in code
+```rust
+  enum CardinalDirections{
+    North,
+    South,
+    East,
+    West,
+  }
+fn main(){
+  let west = CardinalDirections::West(string::from("West"));
+}
+```
+### if/else match
+```rust
+fn main() {                                                         fn main(){
+    let number = 7;                                                      let fruit = "apple";
+    if number < 5 {                                                      match fruit{
+        println!("Number is less than 5");                                    "apple" => println!("🍎"),
+    } else {                                                                  "banana" => println!("🍌"),
+        println!("Number is greater than or equal to 5");                     "chery" => println!("🍒"),
+    }                                                                          _=>println!("⚠️"),
+}                                                                        }
+                                                                      }
+```

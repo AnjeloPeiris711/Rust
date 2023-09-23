@@ -17,3 +17,10 @@ fn main(){
                       ⬆️---------------|
 }                                       ---- 32 = 32 bits 
 ```
+## Shadowing
+```rust
+fn main(){                                         fn main(){
+  let x = 5;                                          let x = 5;
+  let x = x + 1; // x is now 6                        let x+=1; ❌ 
+}                                                  }
+```

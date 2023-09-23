@@ -24,3 +24,30 @@ fn main(){                                         fn main(){
   let x = x + 1; // x is now 6                        let x+=1; ❌ 
 }                                                  }
 ```
+## Scalar data types
+
+### Integer
+```
+            --- i = signed     --- store === -(2^(n-1)) to 2^(n-1)-1 ---
+Integer ---|                                                           |---------default i32
+            --- u = unsigned   --- store === 0 to 2^n-1              ---
+```
+### Floating-point
+```
+ use f32 and f64
+              ⬆️------- default 
+```
+### Numerical Operations
+```
++ = addition
+- = subtraction
+* = multiplication
+/ = division
+% = remainder
+```
+### Booleans
+> use ```bool``` keyword
+one bit size use values 
+``` rust     
+true     false 
+```          

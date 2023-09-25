@@ -137,3 +137,12 @@ fn main(){                               fn main(){                           fn
                                            println!("loop off");              }
                                         }
 ```
+## Error Handling
+
+### panic
+> use `panic` key word
+``` rust                                             😯 thava enna thiyenava 
+  fn main(){
+    panic!("farewell");
+}
+```

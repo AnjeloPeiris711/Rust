@@ -156,7 +156,10 @@ let f = match f{
 ```
 ## Ownership
 > How your program manages memory
-> Can only be one owner at a time
+Rules
+> variable that is called `owner`|
+> Can only be `one owner` at a time |
+> When the owner goes `out of scope`, the value will be `dropped`
 ```rust
                                                       ownership
   |-------------------------------------------------------|----------------------------------------------|

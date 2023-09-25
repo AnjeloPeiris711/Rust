@@ -126,3 +126,14 @@ fn main() {                                                         fn main(){
 }                                                                        }
                                                                       }
 ```
+### Loop
+```rust
+fn main(){                               fn main(){                           fn main(){
+  loop {                                   let mut number = 3;                   let a = [10,20,30,40];
+    println!("I am loop");                 while number != 0{                    for element in a.iter(){
+    break;                                    println!("{}",number);                               ⬆️----iterator       
+  }                                           number -= 1;                         println!("the value is:{}",element);
+}                                          }                                     }
+                                           println!("loop off");              }
+                                        }
+```

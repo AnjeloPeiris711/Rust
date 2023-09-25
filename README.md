@@ -153,5 +153,28 @@ let f = match f{
   Ok(file)=>file,
   Err(error)=> panic!("Can'open the file: {:?}",error),
 }
-```                                 }
-### 
+```
+## Ownership
+> How your program manages memory
+> Can only be one owner at a time
+```rust
+                                                      ownership
+  |-------------------------------------------------------|----------------------------------------------|
+Stack                                                                                                 Heap
+  > LIFO => last in first out
+                 RAM
+  >> fixed        |    >> Mutable
+  let a:i32 =5;  ⬇️    let mut say = String::from("ca");
+====================    say.push_str("t");
+|  +-------------+ |    let say2 = say;
+|  | a | i32 | 5 | |    ========================
+|  +-------------+ |    |  +----------------+  |                                          ==================
+====================    |  | say2 | Pointer |  |                                          |  +-----------+ |
+                        |  +----------------+  |   -------------------------------------->|  | c | a | t | |
+                        |  +----------------+  |                                          |  +-----------+ |
+                        |  | say  | Pointer |❌|                                          ==================
+                        |  +----------------+  |                  
+                        ========================
+                        println!(say); ❌ // ownership in say2
+                        println!(say2); 
+```

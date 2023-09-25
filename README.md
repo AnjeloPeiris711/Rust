@@ -145,6 +145,7 @@ fn main(){                               fn main(){                           fn
   fn main(){                          fn main(){        
     panic!("farewell");                  let v:Vec<i32> = Vec![0,1,2,3];
 }                                        println!("{}",v[6]);
+                                      }
 ```
 > use match
 ``` rust

@@ -141,8 +141,16 @@ fn main(){                               fn main(){                           fn
 
 ### panic
 > use `panic` key word
-``` rust                                             😯 thava enna thiyenava 
-  fn main(){
-    panic!("farewell");
-}
+``` rust          
+  fn main(){                          fn main(){        
+    panic!("farewell");                  let v:Vec<i32> = Vec![0,1,2,3];
+}                                        println!("{}",v[6]);
 ```
+> use match
+``` rust
+let f = match f{
+  Ok(file)=>file,
+  Err(error)=> panic!("Can'open the file: {:?}",error),
+}
+```                                 }
+### 

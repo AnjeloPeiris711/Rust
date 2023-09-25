@@ -181,3 +181,28 @@ Stack                                                                           
                         println!(say); ❌ // ownership in say2
                         println!(say2); 
 ```
+## Borrowing
+> Not cloning
+Rules
+> At any given time,you can have either: `one mutable reference`,or`Any number of immutable references` | References must always be `valid`
+```rust
+fn main(){
+  let say = String::from("Cat");
+  print_out(&say);
+  println!("Again:{}",say);
+}
+fn print_out(to_print:&String){
+  println!("{}",to_print);
+}
+```
+## String
+### Owned String
+``` rust
+let s = String::from("Hi\nBye")
+```
+### &str Type
+``` rust
+  fn string_len(s:&str) -> unsize {
+    s.len
+}
+```
